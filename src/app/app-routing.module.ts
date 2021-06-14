@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AddFilmPage } from './pages/add-film/add.film.page';
 import { FilmsPage } from './pages/films/films.page';
 import { LoginPage } from './pages/login/login.page';
+import { ReservationPage } from './pages/reservations/reservation.page';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginPage
-    // loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'films',
     component: FilmsPage
-    // loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'films/add',
+    component: AddFilmPage
+  },
+  {
+    path: 'reservations',
+    component: ReservationPage
   },
   {
     path: '',

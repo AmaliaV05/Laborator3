@@ -1,0 +1,51 @@
+<app-navbar [pageName]="'Add film'"></app-navbar>
+<ion-content>
+    <div>
+        <form>
+            <ion-item>
+                <ion-label>Title</ion-label>
+                <ion-input type="text" [(ngModel)]="film.title" name="title"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Description</ion-label>
+                <ion-input type="text" [(ngModel)]="film.description" name="description"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Genre</ion-label>
+                <ion-select interface="popover" [(ngModel)]="film.genre" name="genre">
+                    <ion-select-option *ngFor="let option of GENRE" [value]="option">
+                        {{option}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Duration</ion-label>
+                <ion-input type="text" [(ngModel)]="film.duration" name="duration"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Year of release</ion-label>
+                <ion-input type="number" [(ngModel)]="film.yearOfRelease" name="yearOfRelease"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Director</ion-label>
+                <ion-input type="text" [(ngModel)]="film.director" name="director"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Date added</ion-label>
+                <ion-input type="text" [(ngModel)]="film.dateAdded" name="dateAdded"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Rating</ion-label>
+                <ion-input type="number" [(ngModel)]="film.rating" name="rating"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Watched</ion-label>
+                <ion-input type="text" [(ngModel)]="film.watched" name="watched"></ion-input>
+            </ion-item>
+        </form>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-button expand="block" (click)="addFilm()">Add film</ion-button>
+    <ion-button expand="block" color="secondary" [routerLink]="'/films'">Back to films</ion-button>
+</ion-footer>
