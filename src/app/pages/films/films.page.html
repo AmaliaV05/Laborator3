@@ -6,8 +6,12 @@
                 {{i + 1}}
             </ion-label>
             <ion-label>{{film.title}}</ion-label>
+            <ion-label>{{film.yearOfRelease}}</ion-label>
+            <ion-label value="custom" readonly>{{film.duration}}</ion-label>
+            <!-- <ion-input [(ngModel)]="quantity" (ngModelChange) ="doSometing(quantity)"></ion-input> -->
+            <ion-label>{{film.description}}</ion-label>
             <ion-icon name="trash-outline" (click)="deleteFilm(film)"></ion-icon>
-            <ion-icon name="pencil-outline"></ion-icon>
+            <ion-icon name="pencil-outline" routerLink="/film/{{film.id}}"></ion-icon>
             <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-item>
     </ion-list>
@@ -15,3 +19,4 @@
 <ion-footer>
     <ion-button expand="block" (click)="goToAddFilm()">Add film</ion-button>
 </ion-footer>
+

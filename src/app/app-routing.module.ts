@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AddFilmPage } from './pages/add-film/add.film.page';
+import { EditFilmPage } from './pages/edit-film/edit.film.page';
 import { FilmsPage } from './pages/films/films.page';
 import { LoginPage } from './pages/login/login.page';
 import { ReservationPage } from './pages/reservations/reservation.page';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'films/add',
     component: AddFilmPage
+  },
+  {
+    path: 'film/:id',
+    component: EditFilmPage
   },
   {
     path: 'reservations',

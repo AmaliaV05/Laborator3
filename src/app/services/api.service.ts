@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+const baseUrl = 'https://localhost:5001/api/film';
+
 @Injectable()
 export class ApiService {
   API_URL = 'https://localhost:5001/';
@@ -38,6 +40,21 @@ export class ApiService {
       params: this.toHttpParams(params),
     });
   }
+
+  ///////
+  // getF(id): Observable<any> {
+  //   return this.httpClient.get(`${baseUrl}/${id}`);
+  // }
+  // update(id, data): Observable<any> {
+  //   return this.httpClient.put(`${baseUrl}/${id}`, data);
+  // }
+  getF(id): Observable<any> {
+    return this.httpClient.get(`${baseUrl}/${id}`);
+  }
+  update(id, data): Observable<any> {
+    return this.httpClient.put(`${baseUrl}/${id}`, data);
+  }
+  ///////
 
   private getHeaders() {
     const headers = {

@@ -17,15 +17,17 @@ import { FormsModule } from '@angular/forms';
 import { ReservationPage } from './pages/reservations/reservation.page';
 import { AuthService } from './services/auth.service';
 import { TokenInterceptor } from './interceptors/auth.token.interceptor';
+import { EditFilmPage } from './pages/edit-film/edit.film.page';
 
 @NgModule({
   declarations: [
-    // components
-    AddFilmPage,
+    // components    
     AppComponent,
     NavbarComponent,
     SideMenuComponent,
     // pages
+    AddFilmPage,
+    EditFilmPage,
     LoginPage,
     ReservationPage,
     FilmsPage,

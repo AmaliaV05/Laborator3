@@ -27,7 +27,12 @@ export class FilmsPage {
         this.apiSvc.delete(`api/Film/${film.id}`).subscribe(() => {
           this.loadFilms();
         });
-      }
+    }
+
+    // goToEditFilm() {
+    //   this.router.navigateByUrl('films/edit-film');
+    // }
+    // 
     
     private loadFilms() {
       this.apiSvc.get('api/Film').subscribe((response: Array<Film>) => {
